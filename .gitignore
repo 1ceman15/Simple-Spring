@@ -1,0 +1,49 @@
+# Java & Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+hs_err_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# VS Code
+.vscode/
+
+# OS файлы
+.DS_Store
+Thumbs.db
+
+# Лог файлы
+logs/
+*.log
+
+# Spring Boot
+.env
+application-*.properties
+*.properties
+application-*.yml
+
+# Docker & Compose
+docker-compose.override.yml
+
+# Кэшированные зависимости Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Ignoring generated files
+HELP.md
