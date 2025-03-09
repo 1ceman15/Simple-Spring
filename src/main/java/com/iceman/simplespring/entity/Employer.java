@@ -117,7 +117,7 @@ public class Employer {
                 ", salary=" + salary +
                 ", born=" + born +
                 ", phone='" + phone + '\'' +
-                ", department=" + department.name +
+                ", department=" + department.getName() +
                 '}';
     }
 }

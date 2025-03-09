@@ -9,11 +9,11 @@ import java.util.List;
 public class Department {
     @Id
     @Column(name = "depno")
-    int id;
-    String name;
+    private int id;
+    private String name;
     @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
     @JsonManagedReference
-    List<Employer> employers;
+    private List<Employer> employers;
 
     public Department() {
         this.employers = new ArrayList<>();

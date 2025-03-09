@@ -9,14 +9,14 @@ import java.time.LocalDate;
 @Entity(name = "children")
 public class Child {
     @EmbeddedId
-    ChildId id;
+    private ChildId id = new ChildId();
 
-    char sex;
-    LocalDate born;
+    private char sex;
+    private LocalDate born;
     @ManyToOne(cascade =  {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name =  "tabno", insertable = false, updatable = false) // Внешний ключ на Employer
     @JsonBackReference
-    Employer parent;
+    private Employer parent;
 
     public Child() {
     }
