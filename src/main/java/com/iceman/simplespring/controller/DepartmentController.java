@@ -1,6 +1,5 @@
 package com.iceman.simplespring.controller;
 
-import com.iceman.simplespring.entity.Child;
 import com.iceman.simplespring.entity.Department;
 import com.iceman.simplespring.repository.DepartmentRepository;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +31,11 @@ public class DepartmentController {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(savedDepartment.getId()).toUri();
         return ResponseEntity.created(location).body(savedDepartment);
+    }
+
+    @DeleteMapping( "/{id}")
+    public void deleteEmployer(@PathVariable int id) {
+        departmentRepository.deleteById(id);
     }
 
 }

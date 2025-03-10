@@ -44,4 +44,9 @@ public class ChildController {
         return ResponseEntity.created(location).body(savedChild);
     }
 
+    @DeleteMapping( "/{tabno}/{name}")
+    public void deleteEmployer(@PathVariable  String tabno, @PathVariable String name) {
+        childRepository.deleteById(new ChildId(tabno, name));
+    }
+
 }

@@ -39,4 +39,9 @@ public class EmployerController {
                 .buildAndExpand(savedEmployer.getTabno()).toUri();
         return ResponseEntity.created(location).body(savedEmployer);
     }
+
+    @DeleteMapping( "/{id}")
+    public void deleteEmployer(@PathVariable String id) {
+        employerRepository.deleteById(id);
+    }
 }
